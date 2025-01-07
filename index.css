@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox container to layout the image and form side by side */
+.container {
+    display: flex;
+    justify-content: space-between; /* Spacing between image and form */
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* Take up full viewport height */
+}
+
+/* Image section takes up 50% of the width */
+.image-container {
+    flex: 10px;
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+/* Form section takes up 50% of the width */
+.form-container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Image responsive to screen size */
+.img-responsive {
+    max-width: 100%; /* Image will scale properly */
+    height: auto;
+}
+
+/* Form styling */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+/* Buttons should be aligned and styled well */
+.form-group button {
+    width: 100%; /* Make buttons full width */
+    margin-top: 10px;
+}

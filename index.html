@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive" src="https://miro.medium.com/max/1200/0*HknVQR_lvyXqKUaM.jpg" alt="image">
+            </div>
+            <!-- Form Column -->
+            <div class="col-md-6">
+                <h2 class="header">SignUp</h2>
+                <form id="form_data" action="" method="post">
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input id="name" class="form-control" placeholder="Enter your name" type="text" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>   
+                        <input id="email" class="form-control" type="email" placeholder="Enter your email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password: </label>   
+                        <input id="password" class="form-control" type="password" placeholder="Enter your password" required />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default" id="userSignup" type="submit">Submit</button>
+                        <button class="btn btn-default" type="reset">Reset</button>
+                    </div>
+                    <div>
+                        <p>Please login if you are already registered: </p>
+                        <a href="login.html" type="button">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="index.js"></script>
+</body>
+</html>

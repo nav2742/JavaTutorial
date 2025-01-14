@@ -1,46 +1,68 @@
+document.getElementById('your-data').addEventListener('submit',(event)=>{
+    event.preventDefault()
+    console.log(document.getElementById("user-name").value)
+    document.querySelector(".para-text").style.color = "red";
+    document.getElementById("color-change").disabled =true
+})
 
-    document.addEventListener("DOMContentLoaded",()=>{
-        let form = document.getElementById('form_data')
-        if(form){
-            form.addEventListener('submit',(event)=>{
-                event.preventDefault(); 
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const User_Data={
-                    userName: name, 
-                    email:email, 
-                    password:password };
-                if(!name || !email || !password) return alert("Please enter your details")
-                console.log("Data is submitted", User_Data)
-                fetch("http://localhost:8000/signUp", {
-                    method: 'POST', // HTTP method
-                    headers: {
-                        'Content-Type': 'application/json', // Send as JSON
-                    },
-                    body: JSON.stringify(User_Data) // Convert the data to JSON
-                }).then((res)=>{
-                    console.log(res.response)
-                    alert(JSON.stringify(res))
-                    form.reset();
-                }).catch((err)=>{
-                    alert("server Error")
-                    console.log(err)
-                })
-            })
+function ButtonTemplate(data) {
+    const messagecon = document.createElement('div');
+    messagecon.classList.add('button-template');
+    const message = document.createElement('p')
+    message.id = "msg-temp"
+    message.style.display = "block"
+    message.textContent = data.msg
+    messagecon.appendChild(message);
+    document.getElementById('button-template').appendChild(messagecon);
 
-        }
-        
 
-        let login = document.getElementById('login_data')
-        login.addEventListener('submit',(event)=>{
-            event.preventDefault();
-            const Login_name = document.getElementById('login_name').value;
-            const Login_password = document.getElementById('login_password').value;
-            const Login_User_Data={
-                userName: Login_name ,  
-                password:Login_password };
-            if(!Login_name || !Login_password) return alert("Please enter your details")
-            console.log("Data is submitted", Login_User_Data)
+    data.buttons.forEach((element, index) => {
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-template');
+        const buttonText = document.createElement('span');
+        buttonText.classList.add('action-text');
+        buttonText.id = `buttons_${index + 1}`;
+        buttonText.type = "submit"
+        buttonText.textContent = element;
+
+        buttonContainer.appendChild(buttonText);
+        document.getElementById('button-template').appendChild(buttonContainer);
+
+        buttonText.addEventListener('click', (event) => {
+            event.preventDefault()
+            if (event.target.classList.contains('action-text')) {
+                console.log(event.target.textContent)
+                const allButtons = document.querySelectorAll('.action-text');
+                allButtons.forEach((btn) => {
+                    btn.classList.add('disabled');  // Disable by adding the 'disabled' class
+                    btn.style.pointerEvents = "none"
+                    btn.style.cursor = "not-allowed";  // Optionally change the cursor to not-allowed
+                });
+
+            }
+
+
         })
+
+
+    });
+
+
+
+}
+    ButtonTemplate( {
+        msg:"Naveen Kothakota is a very good person",
+        buttons:["Button1","Button2","Button3"]
     })
+
+    
+
+
+// Example usage:
+// ButtonTemplate({
+//     msg: "Naveen Kothakota is a very good person", 
+//     buttons: ["Button1", "Button2", "Button3"]
+// });
+
+
+

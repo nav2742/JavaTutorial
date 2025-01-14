@@ -1,45 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySite My Rules</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body> 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img class="img-responsive" src="https://miro.medium.com/max/1200/0*HknVQR_lvyXqKUaM.jpg" alt="image">
-            </div>
-            <!-- Form Column -->
-            <div class="col-md-6">
-                <h2 class="header">SignUp</h2>
-                <form id="form_data" action="" method="post">
-                    <div class="form-group">
-                        <label for="name">Name: </label>
-                        <input id="name" class="form-control" placeholder="Enter your name" type="text" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email: </label>   
-                        <input id="email" class="form-control" type="email" placeholder="Enter your email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password: </label>   
-                        <input id="password" class="form-control" type="password" placeholder="Enter your password" required />
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-default" id="userSignup" type="submit">Submit</button>
-                        <button class="btn btn-default" type="reset">Reset</button>
-                    </div>
-                    <div>
-                        <p>Please login if you are already registered: </p>
-                        <a href="login.html" type="button">Login</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- External JS -->
+<body>
+    <p class="para-text"> This is the paragraph which I created...</p>
+    <form id="your-data" method="post">
+        <input id="user-name" type="text" placeholder="Please enter your details!!" required>
+        <button type="submit" id="color-change">Thanks!</button>
+    </form> 
+    <div id="button-template">
+        <p style="display: none;">Please select below options</p>
+    </div>    
     <script src="index.js"></script>
 </body>
 </html>

@@ -1,38 +1,72 @@
-*{
-    padding:10px;
-}
-#your-data{
-    color: red;
-}
-.para-text{
-    color: blue;
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.values{
-    border: 0px solid #444;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.button-template {
-    border: 2px solid #000;
-    padding: 10px 10px 10px 10px;
-    /* width: -webkit-fill-available; */
-    width: 25%;
-    text-align: justify;
-};
 
-#msg-temp p{
-    color: red;
-    position: relative;
-    margin-top: auto;
+/* Styling the login form container */
+.login_form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
 }
-.action-text {
-    padding: 10px 20px;  /* Space around the text */
-    text-align: center;   /* Center the text inside */
-    font-size: 16px;      /* Text size */
-    cursor: pointer;      /* Change cursor on hover */
-    transition: background-color 0.3s ease;  /* Smooth transition */
-    user-select: none;     /*Prevent text selection */
+
+.login_form .userName,
+.login_form .password {
+  margin-bottom: 15px;
 }
-.disabled {
-    color: #aaa;             /* Light gray text */
-    cursor: not-allowed;     /* Show not-allowed cursor */
+
+.login_form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login_form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login_form input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.login_form .submit {
+  text-align: center;
+}
+
+.login_form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login_form button:hover {
+  background-color: #0056b3;
+}
+
+.image_back{
+  height: 110%;
 }

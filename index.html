@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySite My Rules</title>
+<html>
+  <head>
+    <title>Login Page</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
-    <p class="para-text"> This is the paragraph which I created...</p>
-    <form id="your-data" method="post">
-        <input id="user-name" type="text" placeholder="Please enter your details!!" required>
-        <button type="submit" id="color-change">Thanks!</button>
-    </form> 
-    <div id="button-template">
-        <p style="display: none;">Please select below options</p>
-    </div>    
-    <script src="index.js"></script>
-</body>
+    <link href="./dist/kore-ai-sdk.min.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class="login_form">
+      <form class="login" method="post">
+        <div class="userName">
+          <label for="username">UserName</label>
+          <input id="username" name="username" required>
+        </div>
+        <div class="password">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="submit">
+          <button class="submit_btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script src="./dist/kore-ai-sdk.min.js"></script>
 </html>
